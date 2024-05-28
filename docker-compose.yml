@@ -1,9 +1,9 @@
 version: '3.0'
 
 services:
-  team1_ansible:
+  ubuntu1:
     image: ubuntu-ansible-sshd:latest
-    container_name: team1_ansible
+    container_name: ubuntu1
     restart: unless-stopped
     ports:
       - "2201:22" # expose the ssh port on 2201
@@ -13,9 +13,9 @@ services:
     environment:
       SSH_USERNAME: ansible
       PASSWORD: Ansible12!
-  team2_ansible:
+  ubuntu2:
     image: ubuntu-ansible-sshd:latest
-    container_name: team2_ansible
+    container_name: ubuntu2
     restart: unless-stopped
     ports:
       - "2202:22" # expose the ssh port on 2202
