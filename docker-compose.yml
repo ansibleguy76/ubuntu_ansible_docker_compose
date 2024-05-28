@@ -6,7 +6,8 @@ services:
     container_name: team1_ansible
     restart: unless-stopped
     ports:
-      - "2201:22"
+      - "2201:22" # expose the ssh port on 2201
+      - "8001:80" # expose the http port on 8001
     stdin_open: true
     tty: true
     environment:
@@ -17,7 +18,8 @@ services:
     container_name: team2_ansible
     restart: unless-stopped
     ports:
-      - "2202:22"
+      - "2202:22" # expose the ssh port on 2202
+      - "8002:80" # expose the http port on 8002
     stdin_open: true
     tty: true
     environment:
